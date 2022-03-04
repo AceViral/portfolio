@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d5047223.css",
+    "main.js": "/portfolio/static/js/main.619f0929.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/QWERy.png": "/portfolio/static/media/QWERy.eaa7e83d6ee3f0afa148.png",
+    "static/media/React-Sneakers.png": "/portfolio/static/media/React-Sneakers.bc30fdec8f683be94a1c.png",
+    "static/media/GH.png": "/portfolio/static/media/GH.676729dc79bd8d08f77b.png",
+    "static/media/Raleway-Bold.ttf": "/portfolio/static/media/Raleway-Bold.d1a96e2aa6257c864d4d.ttf",
+    "static/media/Raleway-Thin.ttf": "/portfolio/static/media/Raleway-Thin.537e4a263280ac058bf9.ttf",
+    "static/media/Me.jpg": "/portfolio/static/media/Me.fce94b3849b55dc05a24.jpg",
+    "static/media/Social-Network.png": "/portfolio/static/media/Social-Network.0a5998677f55f6921e13.png",
+    "index.html": "/portfolio/index.html",
+    "main.d5047223.css.map": "/portfolio/static/css/main.d5047223.css.map",
+    "main.619f0929.js.map": "/portfolio/static/js/main.619f0929.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5047223.css",
+    "static/js/main.619f0929.js"
+  ]
+}
