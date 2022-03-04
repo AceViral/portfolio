@@ -1,0 +1,196 @@
+$shooting-time: 3000ms;
+.aboutMe {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transform: rotateZ(-45deg);
+   h3 {
+      color: #fff;
+      text-align: center;
+      font-size: 32pt;
+      font-family: "Raleway Thin";
+      letter-spacing: 2px;
+      b {
+         color: #61dbfb;
+      }
+   }
+   a {
+      text-decoration: none;
+      button {
+         display: flex;
+         align-items: center;
+         cursor: pointer;
+         background: transparent;
+         border: none;
+         padding: 15px;
+         border: 2px solid #fff;
+         border-radius: 3px;
+         font-family: "Raleway Thin";
+         color: #fff;
+         font-size: 18pt;
+         font-weight: 800;
+         transition: all 0.2s ease-in-out;
+         box-icon {
+            width: 30px;
+            height: 30px;
+            transition: all 0.2s ease-in-out;
+         }
+         &:hover {
+            background: rgba(97, 219, 251, 0.5);
+            border: 2px solid rgba(97, 219, 251, 0.5);
+            box-icon {
+               animation: arrowRot 0.3s ease-in-out;
+               transform: rotateZ(90deg);
+            }
+         }
+      }
+   }
+}
+.nightWrapper {
+   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+   height: 100vh;
+   font-family: "Anton", sans-serif;
+}
+.night {
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transform: rotateZ(45deg);
+}
+
+.shooting_star {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   height: 2px;
+   background: linear-gradient(
+      -45deg,
+      rgba(95, 145, 255, 1),
+      rgba(0, 0, 255, 0)
+   );
+   border-radius: 999px;
+   filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+   animation: tail $shooting-time ease-in-out infinite,
+      shooting $shooting-time ease-in-out infinite;
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 0;
+      height: 2px;
+      background: linear-gradient(
+         -45deg,
+         rgba(0, 0, 255, 0),
+         rgba(95, 145, 255, 1),
+         rgba(0, 0, 255, 0)
+      );
+      transform: translateX(50%) rotateZ(45deg);
+      border-radius: 100%;
+      animation: shining $shooting-time ease-in-out infinite;
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 0;
+      height: 2px;
+      background: linear-gradient(
+         -45deg,
+         rgba(0, 0, 255, 0),
+         rgba(95, 145, 255, 1),
+         rgba(0, 0, 255, 0)
+      );
+      transform: translateX(50%) rotateZ(45deg);
+      border-radius: 100%;
+      animation: shining $shooting-time ease-in-out infinite;
+      transform: translateX(50%) rotateZ(-45deg);
+   }
+
+   @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+         $delay: random(9999) + 0ms;
+         top: calc(50% - #{random(400) - 200px});
+         left: calc(50% - #{random(300) + 0px});
+         animation-delay: $delay;
+         &::before,
+         &::after {
+            animation-delay: $delay;
+         }
+      }
+   }
+}
+
+@keyframes tail {
+   0% {
+      width: 0;
+   }
+
+   30% {
+      width: 100px;
+   }
+
+   100% {
+      width: 0;
+   }
+}
+
+@keyframes shining {
+   0% {
+      width: 0;
+   }
+
+   50% {
+      width: 30px;
+   }
+
+   100% {
+      width: 0;
+   }
+}
+
+@keyframes shooting {
+   0% {
+      transform: translateX(0);
+   }
+
+   100% {
+      transform: translateX(300px);
+   }
+}
+
+@keyframes arrowRot {
+   0% {
+      transform: rotateZ(0deg);
+   }
+   50% {
+      transform: rotateZ(45deg);
+   }
+   100% {
+      transform: rotateZ(90deg);
+   }
+}
+
+@media (max-width: 480px) {
+   .aboutMe {
+      h3 {
+         font-size: 19pt;
+      }
+      a {
+         button {
+            padding: 10px;
+            font-size: 15pt;
+            box-icon {
+               width: 25px;
+               height: 25px;
+            }
+         }
+      }
+   }
+}

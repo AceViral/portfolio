@@ -1,0 +1,49 @@
+.footWrapper {
+   background: #131520;
+   border-top: 1px solid #1d2036;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   a {
+      box-icon {
+         transform: translateY(-50%);
+         width: 55px;
+         height: 55px;
+         background: #306b7a;
+      }
+   }
+   .contacts {
+      display: flex;
+      justify-content: space-between;
+      width: 40vh;
+      margin-top: 5vh;
+      a {
+         box-icon {
+            width: 55px;
+            height: 55px;
+            padding: 12px;
+            background: #30474d;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+               background: #306b7a;
+            }
+         }
+      }
+   }
+   p {
+      display: flex;
+      align-items: center;
+      font-family: "Raleway Thin";
+      font-size: 14pt;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #30474d;
+      box-icon {
+         margin: 0 5px;
+      }
+      b {
+         color: #306b7a;
+      }
+   }
+}

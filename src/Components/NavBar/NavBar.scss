@@ -1,0 +1,33 @@
+.navBar {
+   background: #131520;
+   border-top: 1px solid #1d2036;
+   border-bottom: 1px solid #1d2036;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   a {
+      font-family: "Raleway Thin";
+      font-size: 12pt;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+         color: #61dbfb;
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   .navBar {
+      a {
+         font-size: 10pt;
+      }
+   }
+}
